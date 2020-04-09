@@ -55,13 +55,14 @@ class GameViewModel : ViewModel() {
 
     init {
         Log.i("GameViewModel", "GameViewModel Created!")
+        resetList()
+        nextWord()
     }
     override fun onCleared() {
         super.onCleared()
         Log.i ("GameViewModel", "OnClear Called!")
 
-        resetList()
-        nextWord()
+
     }
 
     /** Methods for buttons presses **/
