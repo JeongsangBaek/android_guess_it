@@ -54,11 +54,11 @@ class GameFragment : Fragment() {
         Log.i("GameFragment", "Called ViewModelProviders.of()")
 
         viewModel.score.observe(this, Observer { newScore ->
-            binding.scoreText.text = viewModel.score.value.toString()
+            binding.scoreText.text = newScore.toString()
         })
 
         viewModel.word.observe(this, Observer { newWord ->
-            binding.wordText.text = viewModel.word.value
+            binding.wordText.text = newWord
         })
 
         viewModel.currentTime.observe(this, Observer { newTime ->
